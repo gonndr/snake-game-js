@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Snake Game</title>
+  <!-- Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome  -->
+  <script src="https://kit.fontawesome.com/8631c2809f.js" crossorigin="anonymous"></script>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="switch.css">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="main-container">
+
+    <div class="title">
+      <h1>Snake Game</h1>
+    </div>
+
+    <div class="game">
+      <div class="screen">
+
+        <div id="snake">
+
+        </div>
+
+        <div id="food">
+
+        </div>
+
+
+      </div>
+
+      <div class="stats">
+        <div class="mobile">
+          <h3>Points</h3>
+          <div class="points">
+            <h2>0</h2>
+          </div>
+        </div>
+
+        <div class="mobile">
+          <h3>Level</h3>
+          <div class="points">
+            <h2>0</h2>
+          </div>
+        </div>
+
+        <div class="mobile">
+          <h3>Toggle Walls</h3>
+          <div class="toggles">
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="center-container">
+
+        <div class="btn-group">
+          <div id="btnUp" class="btn up">
+            <i class="fas fa-arrow-circle-up" ></i>
+          </div>
+
+          <div id="btnRt" class="btn rt">
+            <i class="fas fa-arrow-circle-right" ></i>
+          </div>
+
+          <div id="btnDn" class="btn dn">
+            <i class="fas fa-arrow-circle-down" ></i>
+          </div>
+
+          <div id="btnLt" class="btn lt">
+            <i class="fas fa-arrow-circle-left" ></i>
+          </div>
+        </div>
+      </div>
+      <p>Made by Gonçalo Gomes</p>
+    </div>
+
+  </div>
+
+  <script src="index.js" charset="utf-8"></script>
+
+</body>
+
+</html>
