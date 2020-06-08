@@ -41,8 +41,10 @@ function keyEvent(key) {
           snakeBoy.grow();
           snakeBoy.growNext = false;
           if (snakeBoy.size % 5 === 0) {
-            speed *= 0.85;
-            level++;
+            level = Math.floor(snakeBoy.size/(5+Math.floor(level/2)));
+            var f = 0.85 + 0.1 * (1 - (1 / ((level/2) + 1)));
+            speed *= f;
+
             document.querySelectorAll(".points h2")[1].textContent = level;
           }
         }
