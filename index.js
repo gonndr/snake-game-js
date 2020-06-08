@@ -5,7 +5,8 @@ var ySnake = 12;
 // var kick = 0;
 var id;
 var opKey;
-var speed = 120;
+var f = 0.85;
+var speed = 142 * f;
 var lost = false;
 var level = 0;
 var walls = walls = document.querySelector("input").checked;
@@ -40,13 +41,12 @@ function keyEvent(key) {
         if (snakeBoy.growNext === true) {
           snakeBoy.grow();
           snakeBoy.growNext = false;
-          if (snakeBoy.size % 5 === 0) {
-            level = Math.floor(snakeBoy.size/(5+Math.floor(level/2)));
-            var f = 0.85 + 0.1 * (1 - (1 / ((level/2) + 1)));
-            speed *= f;
-
-            document.querySelectorAll(".points h2")[1].textContent = level;
-          }
+    if(Math.floor(snakeBoy.size/(5+Math.floor(level/2))) - level > 0) {
+          level = Math.floor(snakeBoy.size/(5+Math.floor(level/2)));
+          f = 0.85 + 0.1 * (1 - (1 / ((level/2) + 1)));
+          speed *= f;
+          document.querySelectorAll(".points h2")[1].textContent = level;
+        }
         }
         snakeBoy.direction = key;
         snakeBoy.move();
